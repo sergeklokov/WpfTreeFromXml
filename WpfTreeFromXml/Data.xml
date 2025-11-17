@@ -1,0 +1,10 @@
+﻿<Books>
+  <Book Category="Fiction">
+    <Title>The Great Gatsby</Title>
+    <Author>F. Scott Fitzgerald</Author>
+  </Book>
+  <Book Category="Science">
+    <Title>A Brief History of Time</Title>
+    <Author>Stephen Hawking</Author>
+  </Book>
+</Books>

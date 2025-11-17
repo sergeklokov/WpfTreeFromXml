@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfTreeFromXml"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="600">
+
+    <Window.Resources>
+        <XmlDataProvider x:Key="BooksData" Source="Data.xml" XPath="/Books"/>
+    </Window.Resources>
+
     <Grid>
+
+        <TreeView ItemsSource="{Binding Source={StaticResource BooksData}, XPath=Book}">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding XPath=*}">
+                    <TextBlock Text="{Binding XPath=@Category}" FontWeight="Bold"/>
+                    <HierarchicalDataTemplate.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding XPath=.}"/>
+                        </DataTemplate>
+                    </HierarchicalDataTemplate.ItemTemplate>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
 
     </Grid>
 </Window>
