@@ -4,4 +4,7 @@ Source code for this book can be downloaded at the following website:
 informit.com/title/9780672330339
 
 Result App Screenshot:
-![Result Image](./AppScreenshot.png)
+![Result App Image](./AppScreenshot.png)
+
+Example from the book looks like this:
+![Book Example Image](./ExampleFromTheBook.png)

@@ -13,7 +13,7 @@
 
     <Grid>
 
-        <TreeView ItemsSource="{Binding Source={StaticResource BooksData}, XPath=Book}">
+        <TreeView x:Name="DemoTreeView" ItemsSource="{Binding Source={StaticResource BooksData}, XPath=Book}">
             <TreeView.ItemTemplate>
                 <HierarchicalDataTemplate ItemsSource="{Binding XPath=*}">
                     <TextBlock Text="{Binding XPath=@Category}" FontWeight="Bold"/>
